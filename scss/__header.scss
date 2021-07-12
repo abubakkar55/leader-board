@@ -1,0 +1,57 @@
+.header {
+    height: 80px;
+    background-image: $gradient-color;
+    padding: 1rem 18rem;
+
+    &__logo {
+        span {
+            font-size: 2rem;
+            color: $white-color;
+        }
+
+        &>img {
+            width: 40px;
+            margin-right: .5rem;
+        }
+    }
+
+    &__navbar {
+        & ul li {
+            &:not(:last-child) {
+                margin-right: 2.5rem;
+            }
+
+            & a {
+                color: $white-color;
+                position: relative;
+
+                &.profile-img::before {
+                    display: none;
+                }
+
+                &::before {
+                    transition: width 0.5s ease-in-out;
+                    position: absolute;
+                    width: 0;
+                    height: 2px;
+                    content: "";
+                    bottom: -.3rem;
+                    left: 0;
+                    background: $white-color;
+                }
+
+                &:hover::before {
+                    width: 100%;
+                }
+
+                &.header--dark--btn::before {
+                    display: flex;
+                    align-items: center;
+                    font-size: 2.8rem;
+                    content: "\f186";
+                    font-family: "Font Awesome 5 Free";
+                }
+            }
+        }
+    }
+}

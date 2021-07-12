@@ -1,0 +1,70 @@
+//variables
+$main-color: #562EFF;
+$light-main-color: #4b72f1;
+$orange-color: #FFC014;
+$red-color: #FF4A60;
+$white-color: #ffffff;
+$gradient-color: linear-gradient(to right, $main-color, $light-main-color) ;
+//some important classes
+.container{
+width: 870px;
+border-radius: 10px;
+background-color: $white-color;
+padding: 35px 30px;
+}
+
+//fonts
+
+.font{
+    font-weight: 500;
+    &-md{
+font-size: 1.8rem;
+    }
+    &-lg{
+        font-size: 2rem;
+        line-height: 3.4rem;
+    }
+    &-xl{
+font-size: 25px;
+color: $main-color;
+    }
+}
+
+//Display Flex
+
+.d-flex{
+    display: flex;
+&-ai-c{
+    align-items: center;
+}
+&-ji-c{
+    justify-content: center;
+}
+&-jc-sb{
+justify-content: space-between;
+}
+&-fd-c{
+    flex-direction: column;
+}
+}
+
+
+
+//button
+.btn{
+    display: inline-block;
+    padding: 1rem 3.6rem;
+    color: #fff;
+    border-radius: 2.5rem;
+    background-image: linear-gradient(to right, $main-color, $light-main-color);
+    font-size: 1.6rem;
+    &:hover{
+    background-image: linear-gradient(to left, $main-color, $light-main-color);
+    }
+}
+
+
+
+
+
+
