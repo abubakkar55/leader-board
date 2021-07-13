@@ -17,21 +17,23 @@ html {
 body {
     font-family: 'Poppins', sans-serif;
     font-size: 1.6rem;
+
     &.on #header .header__navbar .header--dark--btn::before {
         content: "\f185";
         font-weight: 700;
     }
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     width: 1rem;
-background: #c6caf9;
-border-radius: 5rem;
-&-thumb{
-
-    background: $main-color;
+    background: #c6caf9;
     border-radius: 5rem;
-}
+
+    &-thumb {
+
+        background: $main-color;
+        border-radius: 5rem;
+    }
 }
 
 a {
@@ -52,25 +54,25 @@ ul {
     background-color: #F3F1FF;
 
     //Players
-    & .top-players {
-        position: relative;
-        padding-bottom: 3.5rem;
-
-        &::after {
-            position: absolute;
-            content: "";
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            border-radius: 5rem;
-            background-color: #ddd;
-        }
-
-        &__container {
+    & .top-section {
+        & .top-players__container {
+            padding-bottom: 3.5rem;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-gap: 3rem;
+            position: relative;
+
+            //horizontall line
+            &::after {
+                position: absolute;
+                content: "";
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                border-radius: 5rem;
+                background-color: #ddd;
+            }
 
             @include breakpoint-down(medium) {
                 grid-template-columns: repeat(1, 1fr);
@@ -118,7 +120,8 @@ ul {
             & .blog__img {
                 width: 17.7rem;
                 height: 11.7rem;
-               @include breakpoint-down(large) {
+
+                @include breakpoint-down(large) {
                     width: 14rem;
                     height: 9rem;
                 }
@@ -145,9 +148,81 @@ ul {
                 }
             }
         }
-        & a.btn{
-          
-            margin-top: 4rem;
+    }
+
+    //Course Section
+    & .course {
+        margin-top: 2.3rem;
+
+        &__container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            @include breakpoint-down(large){
+            grid-template-columns: repeat(2, 1fr);
+            }
+            @include breakpoint-down(medium){
+            grid-template-columns: repeat(1, 1fr);
+            }
         }
+
+        & .course {
+            background: $white-color;
+            box-shadow: 0 0 1rem rgba($color: #000000, $alpha: 0.1);
+            padding: 1.3rem;
+            border-radius: 1rem;
+
+            &__banner img {
+                width: 100%;
+            }
+
+            &__details h3 {
+                margin-bottom: .5rem;
+                @include breakpoint-down(medium){
+                    font-size: 1.8rem;
+                }
+            }
+
+            &__author {
+                color: $red-color;
+            }
+
+            &__info {
+                margin-top: 2rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            &__rating i {
+                margin-left: -.4rem;
+                color: $orange-color;
+                font-size: 1.3rem;
+
+                &.last-one {
+                    color: #AEAEAE;
+                }
+            }
+
+            &__duration {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: .4rem;
+                width: 9.5rem;
+                height: 3rem;
+                padding: .6rem;
+                border-radius: 2rem;
+                background: #FFE4E8;
+                color: $red-color;
+
+                & i,
+                span {
+                    font-size: 1.4rem;
+                    font-weight: 700;
+                }
+            }
+        }
+
     }
 }
