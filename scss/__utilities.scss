@@ -4,67 +4,110 @@ $light-main-color: #4b72f1;
 $orange-color: #FFC014;
 $red-color: #FF4A60;
 $white-color: #ffffff;
-$gradient-color: linear-gradient(to right, $main-color, $light-main-color) ;
+$black-color: #000000;
+$gradient-color: linear-gradient(to right, $main-color, $light-main-color);
+
 //some important classes
-.container{
-width: 870px;
-border-radius: 10px;
-background-color: $white-color;
-padding: 35px 30px;
+.container {
+    width: 80.7rem;
+    border-radius: 1rem;
+    background-color: $white-color;
+    padding: 3.5rem 3rem;
+
+    @include breakpoint-down(large) {
+        width: 95%;
+    }
+
+    @include breakpoint-down(medium) {
+        padding: 2.5rem 1.5rem;
+    }
 }
 
 //fonts
 
-.font{
-    font-weight: 500;
-    &-md{
-font-size: 1.8rem;
+.font {
+
+    &-md {
+        font-size: 1.8rem;
+        font-weight: 500;
     }
-    &-lg{
+
+    &-lg {
+        font-weight: 500;
         font-size: 2rem;
-        line-height: 3.4rem;
+        line-height: 2.7rem;
+        color: #1e1e1e;
+
+        @include breakpoint-down(medium) {
+            text-align: center;
+            font-size: 1.3rem;
+            line-height: 0;
+        }
     }
-    &-xl{
-font-size: 25px;
-color: $main-color;
+
+    &-xl {
+        font-weight: 600;
+        font-size: 2.5rem;
+        color: $main-color;
+        margin-bottom: 3.5rem;
+
+        @include breakpoint-down(medium) {
+            font-size: 2rem;
+            text-align: center;
+        }
+
     }
 }
 
 //Display Flex
 
-.d-flex{
+.d-flex {
     display: flex;
-&-ai-c{
-    align-items: center;
-}
-&-ji-c{
-    justify-content: center;
-}
-&-jc-sb{
-justify-content: space-between;
-}
-&-fd-c{
-    flex-direction: column;
-}
+
+    &-ai-c {
+        align-items: center;
+    }
+
+    &-ji-c {
+        justify-content: center;
+    }
+
+    &-jc-sb {
+        justify-content: space-between;
+    }
+
+    &-fd-c {
+        flex-direction: column;
+    }
 }
 
+// Visibility for different Devices
 
+.hide-for-mobile {
+    @include breakpoint-down(large) {
+        display: none;
+    }
+}
+
+.hide-for-desktop {
+    @include breakpoint-up(large) {
+        display: none;
+    }
+}
 
 //button
-.btn{
-    display: inline-block;
+.btn {
+   text-align: center;
+    display: block;
+    width: 20%;
+    margin: 0 auto;
     padding: 1rem 3.6rem;
     color: #fff;
     border-radius: 2.5rem;
     background-image: linear-gradient(to right, $main-color, $light-main-color);
     font-size: 1.6rem;
-    &:hover{
-    background-image: linear-gradient(to left, $main-color, $light-main-color);
+
+    &:hover {
+        background-image: linear-gradient(to left, $main-color, $light-main-color);
     }
 }
-
-
-
-
-
-

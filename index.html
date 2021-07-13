@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leader Board </title>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/c63551c88e.js" crossorigin="anonymous"></script>
     <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,19 +18,103 @@
 <!-- header -->
 <header class="header d-flex d-flex-ai-c d-flex-jc-sb" id="header">
    <div>
-    <a href="#home" class="d-flex d-flex-ai-c header__logo" ><img  src="images/icons/logo.png" alt="logo"> <span> Idea</span></a>
+    <a href="#home" class="d-flex d-flex-ai-c header__logo" > <i class="fas fa-code"></i> AB Siddik </a>
    </div>
-<nav class="header__navbar">
-    <ul class="d-flex d-flex-ai-c">
+<nav class="header__navbar d-flex d-flex-ai-c">
+    <ul class="d-flex">
         <li><a href="#home">Home </a></li>
         <li><a href="#about">About </a></li>
         <li><a href="#Blog">Blog </a></li>
         <li><a href="#course">Course </a></li>
-        <li><a href="#" class="profile-img"><img src="images/icons/profile.png" alt="profile"> </a></li>
-        <li><a href="#" class="header--dark--btn"></a></li>
     </ul>
+    <div class="header__icons d-flex d-flex-ai-c">
+        <a href="#" class="profile-img"><img src="images/icons/profile.png" alt="profile"> </a>
+        <a href="#btn" class="header--dark--btn"> </a>
+        <a href="#btn"><img class="header--toggle--btn"  src="images/icons/apps.png"  alt="toggle-btn"> </a>
+    </div>
 </nav>
+</header>
 
-</header>r
+<!-- Top player & Top Blog  -->
+<main class="main">
+    <div class="main__container container">
+
+    <!-- Top Player -->
+    <section class="top-players">
+        <h1 class="font-xl"> Top Player </h1>
+        <div class="top-players__container">
+<div class="player">
+    <img src="images/players/player-1.png" alt="player-pic">
+    <h3 class="font-md">Abu BAkkar</h3>
+</div>
+<div class="player">
+    <img src="images/players/player-2.png" alt="player-pic">
+    <h3 class="font-md"> yousuf hossain</h3>
+</div>
+<div class="player">
+    <img src="images/players/player-3.png" alt="player-pic">
+    <h3 class="font-md">Abdullah mahi</h3>
+</div>
+<div class="player">
+    <img src="images/players/player-4.png" alt="player-pic">
+    <h3 class="font-md">Masum Billah</h3>
+</div>
+<div class="player">
+    <img src="images/players/player-5.png" alt="player-pic">
+    <h3 class="font-md"> foyez ullah</h3>
+</div>
+<div class="player">
+    <img src="images/players/player-6.png" alt="player-pic">
+    <h3 class="font-md">safian  </h3>
+</div>
+        </div>
+    </section>
+    <!-- Top Blog -->
+<section class="top-blogs">
+    <h1 class="font-xl">Top Blogs</h1>
+        <div class="top-blogs__container">
+            <div class="blog">
+                <div class="blog__banner"><img src="images/blogs/blog-1.png" class="blog__img" alt="blog-banner"></div>
+                <div class="blog__details">
+                    <a class="font-lg" href="#">  13 of My Favorite
+                        UI/UX Goodies  </a>
+                    <small class="blog__release">Released: 13 june 2021 </small>
+                    <p class="blog__author"> By <span>AB Siddik</span>  </p>
+                </div>
+            </div>
+            <div class="blog">
+                <div class="blog__banner"><img src="images/blogs/blog-2.png" class="blog__img" alt="blog-banner"></div>
+                <div class="blog__details">
+                    <a class="font-lg" href="#"> UI cheat sheet: 
+                        list vs grids  </a>
+                    <small class="blog__release">Released: 14 june 2021 </small>
+                    <p class="blog__author"> By <span>Abu jafor</span>  </p>
+                </div>
+            </div>
+            <div class="blog">
+                <div class="blog__banner"><img src="images/blogs/blog-3.png" class="blog__img" alt="blog-banner"></div>
+                <div class="blog__details">
+                    <a class="font-lg" href="#"> 7 typography tips 
+                        for interface design  </a>
+                    <small class="blog__release">Released: 15 june 2021 </small>
+                    <p class="blog__author"> By <span>AB Siddik</span>  </p>
+                </div>
+            </div>
+            <div class="blog">
+                <div class="blog__banner"><img src="images/blogs/blog-4.png" class="blog__img" alt="blog-banner"></div>
+                <div class="blog__details">
+                    <a class="font-lg" href="#"> Your logo <br> is 
+                        copied  </a>
+                    <small class="blog__release">Released: 16 june 2021 </small>
+                    <p class="blog__author"> By <span>Abrar Faiyaz </span>  </p>
+                </div>
+            </div>
+        </div> 
+<a href="#seemore" class="btn"> See more </a>
+
+</section>
+</div>
+</main>
+<script src="script.js"></script>
 </body>
 </html>
